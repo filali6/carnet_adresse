@@ -1,0 +1,186 @@
+/* Style global */
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url('img_bureau.jpg');
+  background-size: cover;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Prendre toute la largeur disponible */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  margin: 0; /* Supprimer les marges par défaut */
+  padding: 0; /* Supprimer le padding par défaut */
+  border-radius: 0; /* Supprimer l'arrondi des coins (facultatif) */
+  
+  
+}
+
+/* Partie 1 */
+.part1 {
+  display: flex;
+  flex-direction: column; /* Modifier la direction en "column" pour empiler verticalement */
+  justify-content: center; /* Aligner les éléments au centre de la colonne */
+  align-items: center; /* Aligner les éléments à gauche (vous pouvez changer en "center" pour les centrer horizontalement) */
+  margin-bottom: 20px;
+}
+
+.part1 h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px; /* Ajouter une marge inférieure au titre pour l'espacer des boutons */
+}
+
+.part1 button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: hsl(27, 86%, 45%); /* Green */
+  color: white;
+  outline: 2px solid white; /* Contour blanc */
+}
+
+/* Partie 2 - Liste et Formulaire */
+.liste-formulaire {
+  display: flex; /* Utiliser le flexbox pour organiser les éléments horizontalement */
+  flex-wrap: wrap; /* Permettre aux éléments de s'enrouler sur plusieurs lignes si nécessaire */
+  margin-top: 40px;
+}
+
+/* Liste */
+.liste {
+  width: 40%; /* Prendre 50% de la largeur disponible */
+  margin-right: 100px; /* Marge de droite pour séparer de la liste du formulaire */
+  margin-left:60px;
+  color: white;
+  background-color: rgba(131, 129, 129, 0.5); /* Couleur d'arrière-plan semi-transparente */
+  position: relative; /* Permettre le positionnement des pseudo-éléments */
+  padding: 20px; /* Ajouter du padding pour l'espace intérieur */
+  border-radius: 10px; /* Arrondit les coins du formulaire */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Ombre portée pour l'effet de surbrillance */
+}
+.liste ul#contactList li {
+  border: 1px solid #ddd; /* Add a solid border */
+  padding: 5px; /* Add padding around the content */
+  margin-bottom: 10px; /* Add space between contacts */
+  border-radius: 5px; /* Round the corners of the rectangle */
+}
+.surligné {
+  background-color: rgba(98, 97, 97, 0.5);; /* Exemple de couleur d'arrière-plan */
+  font-weight: bold; /* Exemple de poids de police */
+}
+
+#contactList {
+  list-style: none;
+  padding: 0;
+}
+
+#contactList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+/*partie detaille du contact*/
+#contactDetails {
+  width: 40%;
+  margin-right: 0px;
+  position: relative; /* Position pour le contenu superposé */
+  background-color: rgba(131, 129, 129, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  display: none;
+}
+#contactDetails.active {
+  display: block; /* Afficher le formulaire lorsque la classe est active */
+}
+#contactInfo span {
+  display: block; /* Pour afficher chaque détail du contact sur une ligne */
+  margin-bottom: 5px; /* Espacement entre chaque ligne de détail */
+}
+#editContactBtn {
+  margin-top: 20px;
+  background-color: hsl(27, 86%, 45%); /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  border-radius: 10%; /* Forme arrondie (carré) */
+  cursor: pointer; /* Indicateur de pointeur pour le clic */
+  display: inline-block;
+  outline: 2px solid white; /* Contour blanc */
+}
+
+
+/* Formulaire */
+.formulaire {
+  width: 40%; /* Prendre 50% de la largeur disponible */
+  background-color: rgba(131, 129, 129, 0.5); /* Couleur d'arrière-plan semi-transparente */
+  margin-right: 0px;
+  position: relative; /* Permettre le positionnement des pseudo-éléments */
+  padding: 20px; /* Ajouter du padding pour l'espace intérieur */
+  border-radius: 10px; /* Arrondit les coins du formulaire */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Ombre portée pour l'effet de surbrillance */
+  color: white;
+  display: none;
+}
+
+.formulaire.active {
+  display: block; /* Afficher le formulaire lorsque la classe est active */
+}
+
+
+#contactForm {
+  display: flex;
+  flex-direction: column; /* Maintenir la disposition verticale du formulaire */
+}
+
+#contactForm label {
+  margin-bottom: 5px;
+}
+
+#contactForm input,
+#contactForm select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boutons {
+  display: flex; /* Activer le flexbox pour les boutons */
+  justify-content: flex-end; /* Aligner les éléments à droite */
+}
+
+#enregistrerBtn,
+#effacerBtn {
+  background-color: hsl(27, 86%, 45%); /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Marge interne du bouton */
+  border-radius: 50%; /* Forme arrondie (carré) */
+  display: inline-block; /* Permettre la disposition côte à côte */
+  margin-right: 10px; /* Marge entre les boutons */
+  cursor: pointer; /* Indicateur de pointeur pour le clic */
+  width: 100px; /* Largeur des boutons */ /* Définir la largeur des boutons */
+  outline: 2px solid white; /* Contour blanc */
+
+}
+
+/* Bouton d'enregistrement (optionnel) */
+#enregistrerBtn {
+  background-color: hsl(27, 86%, 45%); /* Couleur de fond spécifique pour le bouton d'enregistrement */
+}
+
+/* Bouton d'effacement (optionnel) */
+#effacerBtn {
+  background-color: hsl(27, 86%, 45%); /* Couleur de fond spécifique pour le bouton d'effacement */
+}
